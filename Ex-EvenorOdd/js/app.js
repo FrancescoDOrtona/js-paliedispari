@@ -1,7 +1,7 @@
 // #Numero pari o dispari
 // Chiedo all'utente pari o dispari ed un numero da 1 a 5
 
-const userOddEvenChose = prompt('Scegli tra Pari o Dispari');
+const userOddEvenChose = prompt('Scegli tra Pari o Dispari').trim().toLowerCase();
 console.log(userOddEvenChose, typeof(userOddEvenChose));
 
 const userNumber = parseInt(prompt('Scegli un numero da 1 a 5'));
@@ -9,6 +9,16 @@ console.log(userNumber);
 
 const pcNumber = getRandomNumber(1,5);
 console.log(pcNumber);
+
+
+// Scrivo la condizione per cui il giocatore vince o perde
+    if((userOddEvenChose === 'pari') && (numberSumOddEven(userNumber,pcNumber) === true)){
+        console.log('Hai vinto, il numero è Pari');
+    } else if ((userOddEvenChose === 'dispari') && (numberSumOddEven(userNumber,pcNumber) === false)) {
+        console.log('Hai vinto, il numero è Dispari');
+    } else {
+        console.log('Hai perso, riprova');
+    }
 
 // Functions
 // Funzione per un numero random tra 1 e 5
