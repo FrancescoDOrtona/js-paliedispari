@@ -7,9 +7,9 @@ const inverseWord = invertWord(word);
 
 // Confronto le parole e stamperò se sono palindrome o meno
 if(word === inverseWord){
-    console.log(`La parola "${word}" è palindroma`)
+    console.log(`La parola "${word}" è palindroma`);
 } else {
-    console.log(`La parola "${word}" non è palindroma`)
+    console.log(`La parola "${word}" non è palindroma`);
 }
 
 
